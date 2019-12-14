@@ -12186,3 +12186,166 @@ JOIN `ospos_people` ON `ospos_people`.`person_id` = `ospos_employees`.`person_id
 WHERE `ospos_employees`.`person_id` = '5' 
  Execution Time:7.7962875366211E-5
 
+SELECT 1
+FROM `ospos_sessions`
+WHERE `id` = 'i7619u0q30bhkspcc95dlrl9ksu8tbli'
+AND `ip_address` = '127.0.0.1' 
+ Execution Time:0.081795930862427
+
+SELECT GET_LOCK('d6db6c9a4e32fbbaa978162c0145c331', 300) AS ci_session_lock 
+ Execution Time:0.00050902366638184
+
+SELECT `data`
+FROM `ospos_sessions`
+WHERE `id` = 'i7619u0q30bhkspcc95dlrl9ksu8tbli'
+AND `ip_address` = '127.0.0.1' 
+ Execution Time:0.00028514862060547
+
+UPDATE `ospos_sessions` SET `timestamp` = 1576322500, `data` = '__ci_last_regenerate|i:1576322500;person_id|s:1:\"5\";menu_group|s:4:\"home\";'
+WHERE `id` = 'i7619u0q30bhkspcc95dlrl9ksu8tbli'
+AND `ip_address` = '127.0.0.1' 
+ Execution Time:0.17586278915405
+
+SELECT RELEASE_LOCK('d6db6c9a4e32fbbaa978162c0145c331') AS ci_session_lock 
+ Execution Time:0.00014114379882812
+
+SELECT 1
+FROM `ospos_sessions`
+WHERE `id` = 'i7619u0q30bhkspcc95dlrl9ksu8tbli'
+AND `ip_address` = '127.0.0.1' 
+ Execution Time:0.00026392936706543
+
+SELECT GET_LOCK('57497442062bb157fd96e022d0d41ac4', 300) AS ci_session_lock 
+ Execution Time:0.00010204315185547
+
+SELECT `data`
+FROM `ospos_sessions`
+WHERE `id` = '9a6mee3s7rd8ihl8ej288cvu0kbglejs'
+AND `ip_address` = '127.0.0.1' 
+ Execution Time:0.0002899169921875
+
+SELECT *
+FROM `ospos_employees`
+JOIN `ospos_people` ON `ospos_people`.`person_id` = `ospos_employees`.`person_id`
+WHERE `ospos_employees`.`person_id` = '5' 
+ Execution Time:0.00016498565673828
+
+SELECT *
+FROM `ospos_grants`
+WHERE `permission_id` LIKE 'config%' ESCAPE '!'
+AND `person_id` = '5' 
+ Execution Time:9.5844268798828E-5
+
+SELECT *
+FROM `ospos_permissions`
+WHERE `permission_id` LIKE 'config!_%' ESCAPE '!' 
+ Execution Time:7.0810317993164E-5
+
+SELECT *
+FROM `ospos_modules`
+JOIN `ospos_permissions` ON `ospos_permissions`.`permission_id` = `ospos_modules`.`module_id`
+JOIN `ospos_grants` ON `ospos_permissions`.`permission_id` = `ospos_grants`.`permission_id`
+WHERE `person_id` = '5'
+AND `menu_group` IN('home', 'both')
+AND `sort` != 0
+ORDER BY `sort` ASC 
+ Execution Time:8.5830688476562E-5
+
+SHOW TABLES FROM `ospos` 
+ Execution Time:0.027611017227173
+
+SELECT `version`
+FROM `ospos_migrations` 
+ Execution Time:0.00012803077697754
+
+SELECT *
+FROM `ospos_app_config`
+ORDER BY `key` ASC 
+ Execution Time:0.00013494491577148
+
+SELECT *
+FROM `ospos_employees`
+JOIN `ospos_people` ON `ospos_people`.`person_id` = `ospos_employees`.`person_id`
+WHERE `ospos_employees`.`person_id` = '5' 
+ Execution Time:0.00010490417480469
+
+SELECT *
+FROM `ospos_employees`
+JOIN `ospos_people` ON `ospos_people`.`person_id` = `ospos_employees`.`person_id`
+WHERE `ospos_employees`.`person_id` = '5' 
+ Execution Time:5.9127807617188E-5
+
+SELECT *
+FROM `ospos_employees`
+JOIN `ospos_people` ON `ospos_people`.`person_id` = `ospos_employees`.`person_id`
+WHERE `ospos_employees`.`person_id` = '5' 
+ Execution Time:5.793571472168E-5
+
+SELECT *
+FROM `ospos_employees`
+JOIN `ospos_people` ON `ospos_people`.`person_id` = `ospos_employees`.`person_id`
+WHERE `ospos_employees`.`person_id` = '5' 
+ Execution Time:5.6028366088867E-5
+
+SELECT *
+FROM `ospos_employees`
+JOIN `ospos_people` ON `ospos_people`.`person_id` = `ospos_employees`.`person_id`
+WHERE `ospos_employees`.`person_id` = '5' 
+ Execution Time:0.00014400482177734
+
+SELECT *
+FROM `ospos_stock_locations`
+WHERE `deleted` = 0 
+ Execution Time:0.00012898445129395
+
+SELECT *
+FROM `ospos_dinner_tables`
+WHERE `deleted` = 0 
+ Execution Time:0.00012612342834473
+
+SELECT *
+FROM `ospos_customers_packages`
+WHERE `deleted` = 0 
+ Execution Time:0.00012588500976562
+
+SELECT *
+FROM `ospos_tax_codes`
+WHERE `deleted` = 0
+ORDER BY `tax_code_name` ASC 
+ Execution Time:0.00013208389282227
+
+SELECT *
+FROM `ospos_tax_categories`
+WHERE `deleted` = 0
+ORDER BY `tax_group_sequence` ASC, `tax_category` ASC 
+ Execution Time:7.7009201049805E-5
+
+SELECT *
+FROM `ospos_tax_jurisdictions`
+WHERE `deleted` = 0
+ORDER BY `jurisdiction_name` ASC 
+ Execution Time:8.2015991210938E-5
+
+SELECT `sort`
+FROM `ospos_grants`, `ospos_modules`
+WHERE `module_id` = 'office' 
+ Execution Time:7.2002410888672E-5
+
+SELECT *
+FROM `ospos_app_config`
+WHERE `key` = 'mailchimp_api_key'
+ LIMIT 1 
+ Execution Time:0.00030994415283203
+
+SELECT *
+FROM `ospos_attribute_definitions`
+WHERE `deleted` = 0
+AND `definition_type` NOT IN('GROUP') 
+ Execution Time:0.00023102760314941
+
+SELECT *
+FROM `ospos_employees`
+JOIN `ospos_people` ON `ospos_people`.`person_id` = `ospos_employees`.`person_id`
+WHERE `ospos_employees`.`person_id` = '5' 
+ Execution Time:0.00010585784912109
+
